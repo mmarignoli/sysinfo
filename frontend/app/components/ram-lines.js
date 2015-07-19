@@ -7,6 +7,7 @@ export default Ember.Component.extend({
     	"type": "serial",
     	"startDuration": 0,
       "thousandsSeparator": "",
+      "panEventsEnabled": false,
       'sequencedAnimation': false,
     	"categoryAxis": {
     		"gridPosition": "start",

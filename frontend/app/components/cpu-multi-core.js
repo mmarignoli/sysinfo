@@ -6,6 +6,7 @@ export default Ember.Component.extend({
       "type": "serial",
       "theme": "light",
       "startDuration": 0,
+      "panEventsEnabled": false,
       'sequencedAnimation': false,
       "marginRight": 70,
       "dataProvider": [],

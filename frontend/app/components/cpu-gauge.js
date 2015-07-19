@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   chart: function(){
     return AmCharts.makeChart("cpu-gauge", {
     	"type": "gauge",
+      "panEventsEnabled": false,
     	"arrows": [
     		{
     		}
