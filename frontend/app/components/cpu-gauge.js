@@ -44,7 +44,7 @@ export default Ember.Component.extend({
     		{
     			"id": "Title-1",
     			"size": 15,
-    			"text": "Speedometer"
+    			"text": "Cpu Usage"
     		}
     	]
     })
