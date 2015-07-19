@@ -1,8 +1,12 @@
 #chartdiv, #ram-lines, #cpu-gauge {
-	float: left;
-	width		: 50%;
-	height		: 500px;
+	height		: 300px;
 	font-size	: 11px;
+}
+@media #{$medium-up} {
+	#chartdiv, #ram-lines, #cpu-gauge {
+		height		: 500px;
+		font-size	: 11px;
+	}
 }
 
 .amcharts-export-menu-top-right {
