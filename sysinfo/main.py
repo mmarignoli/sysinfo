@@ -5,7 +5,6 @@ import tornado.gen
 import psutil, json
 import datetime
 from models.process import Process
-from pyspectator.computer import Computer
 
 class EchoWebSocket(tornado.websocket.WebSocketHandler):
     def testing_callback(self):
