@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
     this.store.pushMany('proc', this.store.normalize('proc', this.get('proc')));
   }.observes('proc'),
   procList: function(){
-    return Ember.ArrayProxy.createdWithMixins(Ember.SortableMixin,{
+    return Ember.ArrayProxy.create({
       sortProperties: ['cpu_percent'],
       sortAscending: true,
       content: this.get('proc')
@@ -23,7 +23,7 @@ export default Ember.Controller.extend({
     * will retrieve a cached websocket if one exists or in this case it
     * will create a new one for us.
     */
-    var socket = this.get('socketService').socketFor('ws://localhost:8888/');
+    var socket = this.get('socketService').socketFor(`ws://${window.location.hostname}:8888/`);
 
     /*
     * 3) The final step is to define your event handlers. All event handlers
@@ -58,7 +58,7 @@ export default Ember.Controller.extend({
       // socket.send('Hello Websocket World');
       var data = JSON.parse('{"cpus":[{"usage": 9.0, "cpuid": 0}, {"usage": 2.9, "cpuid": 1}, {"usage": 5.1, "cpuid": 2}, {"usage": 3.0, "cpuid": 3}, {"usage": 2.0, "cpuid": 4}, {"usage": 1.0, "cpuid": 5}, {"usage": 13.9, "cpuid": 6}, {"usage": 1.0, "cpuid": 7}]}');
 
-      this.store.pushPayload(data);
+      // this.store.pushPayload(data);
     }
   }
 });

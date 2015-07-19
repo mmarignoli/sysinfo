@@ -4,7 +4,7 @@ import tornado.websocket
 import tornado.gen
 import psutil, json
 import datetime
-from lib.process import Process
+from models.process import Process
 
 class EchoWebSocket(tornado.websocket.WebSocketHandler):
     def get_color(self, percentage):

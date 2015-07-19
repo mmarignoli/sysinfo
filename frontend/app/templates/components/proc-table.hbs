@@ -5,9 +5,9 @@
     <th>exe</th>
     <th>cmdline</th>
   </tr>
-  {{#each procList as |process|}}
+  {{#each dataProvider as |process|}}
   <tr>
-    <td>{{process.pid}}</td>
+    <td>{{process.id}}</td>
     <td>{{process.cpu_percent}}</td>
     <td>{{process.exe}}</td>
     <td>{{process.cmdline}}</td>
