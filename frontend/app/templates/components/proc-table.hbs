@@ -1,0 +1,16 @@
+<table style="width:50%">
+  <tr>
+    <th>PID</th>
+    <th>CPU</th>
+    <th>exe</th>
+    <th>cmdline</th>
+  </tr>
+  {{#each procList as |process|}}
+  <tr>
+    <td>{{process.pid}}</td>
+    <td>{{process.cpu_percent}}</td>
+    <td>{{process.exe}}</td>
+    <td>{{process.cmdline}}</td>
+  </tr>
+  {{/each}}
+</table>
